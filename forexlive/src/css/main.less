@@ -1,0 +1,330 @@
+// Core variables and mixins
+@import "../bower_components/bootstrap/less/variables.less";
+@import "../bower_components/bootstrap/less/mixins.less";
+// Reset and dependencies
+@import "../bower_components/bootstrap/less/normalize.less";
+@import "../bower_components/bootstrap/less/print.less";
+@import "../bower_components/bootstrap/less/glyphicons.less";
+// Core CSS
+@import "../bower_components/bootstrap/less/scaffolding.less";
+@import "../bower_components/bootstrap/less/type.less";
+@import "../bower_components/bootstrap/less/code.less";
+@import "../bower_components/bootstrap/less/grid.less";
+@import "../bower_components/bootstrap/less/tables.less";
+@import "../bower_components/bootstrap/less/forms.less";
+@import "../bower_components/bootstrap/less/buttons.less";
+// Components
+@import "../bower_components/bootstrap/less/component-animations.less";
+@import "../bower_components/bootstrap/less/dropdowns.less";
+@import "../bower_components/bootstrap/less/button-groups.less";
+@import "../bower_components/bootstrap/less/input-groups.less";
+@import "../bower_components/bootstrap/less/navs.less";
+@import "../bower_components/bootstrap/less/navbar.less";
+@import "../bower_components/bootstrap/less/breadcrumbs.less";
+@import "../bower_components/bootstrap/less/pagination.less";
+@import "../bower_components/bootstrap/less/pager.less";
+@import "../bower_components/bootstrap/less/labels.less";
+@import "../bower_components/bootstrap/less/badges.less";
+@import "../bower_components/bootstrap/less/jumbotron.less";
+@import "../bower_components/bootstrap/less/thumbnails.less";
+@import "../bower_components/bootstrap/less/alerts.less";
+@import "../bower_components/bootstrap/less/progress-bars.less";
+@import "../bower_components/bootstrap/less/media.less";
+@import "../bower_components/bootstrap/less/list-group.less";
+@import "../bower_components/bootstrap/less/panels.less";
+@import "../bower_components/bootstrap/less/responsive-embed.less";
+@import "../bower_components/bootstrap/less/wells.less";
+@import "../bower_components/bootstrap/less/close.less";
+// Components w/ JavaScript
+@import "../bower_components/bootstrap/less/modals.less";
+@import "../bower_components/bootstrap/less/tooltip.less";
+@import "../bower_components/bootstrap/less/popovers.less";
+@import "../bower_components/bootstrap/less/carousel.less";
+// Utility classes
+@import "../bower_components/bootstrap/less/utilities.less";
+@import "../bower_components/bootstrap/less/responsive-utilities.less";
+@import "./social.less";
+
+@bg-dark: #222;
+@fg-dark: #222;
+@perimeter-width: 200px;
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+html {
+    color: @fg-dark;
+    height: 100vh;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    height: 100vh;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, {
+    font-family: Open Sans Condensed, sans-serif;
+    font-weight: 700;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.container-forexlive {
+    position: relative;
+    .container();
+    @media (min-width: @screen-sm) {
+        max-width: 992px;
+        width: auto;
+    }
+
+    @media (min-width: @screen-md) {
+        width: 992px;
+    }
+
+    @media (min-width: @screen-lg) {
+        width: 992px;
+    }
+}
+
+.perimeter-container {
+    height: 600px;
+    position: absolute;
+    top: 0;
+    width: @perimeter-width;
+
+    @media (max-width: 1430px) {
+        display: none;
+    }
+
+    &-left {
+        left: -200px;
+    }
+
+    &-right {
+        right: -200px;
+    }
+}
+
+.perimeter-container-fixed {
+    height: 100vh;
+    left: 50%;
+    position: fixed;
+    top: 0;
+    width: @perimeter-width;
+    z-index: -1;
+
+    @media (max-width: 1430px) {
+        display: none;
+    }
+
+    &-left {
+        margin-left: -696px;
+    }
+
+    &-right {
+        margin-left: 496px;
+    }
+
+    .perimeter-content {
+        margin-top: 62px;
+    }
+}
+
+@media (min-width: @screen-sm) {
+    .navbar {
+        border-radius: 0;
+    }
+}
+
+.container-forexlive > .navbar-header,
+.container-forexlive > .navbar-collapse {
+    margin-left: 0;
+}
+
+.navbar-brand {
+    height: 40px;
+    margin-top: 3px;
+    padding: 0 0;
+
+    img {
+        height: 100%;
+    }
+}
+
+.ad-bar-top {
+    padding: 0 20px;
+
+    .leaderboard {
+        float: left;
+
+        @media (max-width: @screen-sm-max) {
+            float: none;
+            margin: 0 auto;
+            width: 729px;
+        }
+    }
+    .small {
+        float: right;
+        width: 210px;
+    }
+}
+
+.main-content {
+    margin-top: 10px;
+
+    .col-main {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .col-side {
+        padding-right: 10px;
+    }
+}
+
+.stream {
+    background: #fff;
+    border: 1px solid #e4e4ec;
+    margin-bottom: 20px;
+
+    &-header {
+        color: #fff;
+        background-color: #4e555d;
+        padding: 10px;
+
+        &-title {
+            margin: 7px 0 0 5px;
+            text-shadow: 1px 1px 1px #444;
+        }
+
+        .market-list {
+            margin-bottom: 0;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+
+                &:hover, &:active, &:visited {
+                    color: #fff;
+                    text-decoration: none;
+                }
+
+                &.closed {
+                    color: #71777d;
+                }
+            }
+
+            li {
+                text-align: center;
+                width: 90px;
+            }
+
+            .market-name, .market-time {
+                text-align: center;
+                margin: 0;
+            }
+
+            .market-time {
+                font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 12px;
+            }
+        }
+    }
+
+    &-item {
+        border-bottom: 1px solid #f2f2f5;
+        margin-top: 10px;
+        padding: 0 10px 10px;
+
+        .media-object {
+            height: 82px;
+            width: 82px;
+        }
+
+        .teaser {
+            margin-bottom: 0;
+        }
+
+        .source {
+            font-family: arial, sans-serif;
+            font-size: 12px;
+            margin-bottom: 0;
+            margin-top: 3px;
+
+            > a {
+                color: #1e7d8e;
+            }
+        }
+
+        .tag-list {
+            display: none;
+            font-family: arial, sans-serif;
+            font-size: 12px;
+            margin-bottom: 0;
+            max-width: 370px;
+
+            > li {
+                padding-left: 7px;
+                padding-right: 7px;
+                text-align: right;
+            }
+        }
+
+        @media (min-width: @screen-sm) {
+            &:hover .tag-list {
+                display: block;
+            }
+        }
+
+        &:first-child {
+            margin-top: 10px;
+        }
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.article-list-item {
+    border-top: 5px solid #ccc;
+    padding-top: 10px;
+}
+
+.article-header .date {
+    color: #9c9c9c;
+}
+
+.article-header .by {
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.article-header .by .avatar {
+    height: 24px;
+    width: 24px;
+}
+
+.article-header .by .author {
+    font-family: TimesNewRoman, Times New Roman, Times, Baskerville, Georgia, serif;
+    font-style: italic;
+}
+
+.article-body {
+    font-size: 17px;
+    padding-left: 5px;
+}
+
+.article-body blockquote {
+    background-color: #fbfbfb;
+    font-style: italic;
+}
+
