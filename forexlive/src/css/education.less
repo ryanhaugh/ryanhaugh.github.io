@@ -1,0 +1,112 @@
+// Core variables and mixins
+@import "../bower_components/bootstrap/less/variables.less";
+@import "../bower_components/bootstrap/less/mixins.less";
+// Reset and dependencies
+@import "../bower_components/bootstrap/less/normalize.less";
+// Core CSS
+@import "../bower_components/bootstrap/less/scaffolding.less";
+@import "../bower_components/bootstrap/less/type.less";
+@import "../bower_components/bootstrap/less/grid.less";
+@import "../bower_components/bootstrap/less/forms.less";
+@import "../bower_components/bootstrap/less/buttons.less";
+// Utility classes
+@import "../bower_components/bootstrap/less/utilities.less";
+@import "../bower_components/bootstrap/less/responsive-utilities.less";
+
+//@import "./social.less";
+
+@bg-dark: #222;
+@fg-dark: #222;
+@perimeter-width: 200px;
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+html {
+    color: @fg-dark;
+    height: 100vh;
+}
+
+body {
+    background-color: #0b192e;
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    height: 100vh;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, {
+    font-family: Open Sans Condensed, sans-serif;
+    font-weight: 700;
+}
+
+.label {
+    display: table-cell;
+    &:extend(label);
+}
+
+.education .bg {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    @media (min-width: @screen-xs-max) and (min-height: 600px) {
+        //background: #000 url(http://i.istockimg.com/file_thumbview_approve/36563476/2/stock-illustration-36563476-abstract-world-map-background.jpg) no-repeat center center;
+        //background: #000 url(http://i.istockimg.com/file_thumbview_approve/37444400/2/stock-illustration-37444400-abstract-technical-background.jpg) no-repeat center center;
+        background: #000 url(../img/bg-education-1.jpg) no-repeat center center;
+        //background: #000 url(http://image.shutterstock.com/display_pic_with_logo/403330/403330,1260886715,2/stock-vector-stock-chart-on-a-globe-concept-of-global-trade-vector-illustration-42878548.jpg) no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.sign-up-box {
+    &-bg {
+        background-color: #000;
+        opacity: 0.8;
+    }
+
+    &-logo {
+        height: 40px;
+        margin-bottom: 10px;
+        margin-top: 18px;
+        padding: 0 0;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &-content {
+        padding: 0 20px;
+
+        &-header {
+            color: #fff;
+            text-align: center;
+        }
+
+        &-copy {
+            color: #fff;
+            text-align: center;
+        }
+
+        &-form {
+            background-color: #fff;
+            border: 0 solid #000000;
+            border-radius: 10px 10px 10px 10px;
+            padding: 20px 20px 10px;
+        }
+    }
+
+    @media (min-width: @screen-xs-max) and (min-height: 600px) {
+        left: 50%;
+        margin-left: -300px;
+        margin-top: -300px;
+        position: absolute;
+        height: 550px;
+        top: 50%;
+        width: 600px;
+    }
+}
