@@ -18,6 +18,8 @@
 @bg-dark: #222;
 @fg-dark: #222;
 @perimeter-width: 200px;
+@sign-up-box-height: 610px;
+@sign-up-box-width: 600px;
 
 .no-gutter > [class*='col-'] {
     padding-right: 0;
@@ -54,10 +56,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, {
     top: 0;
 
     @media (min-width: @screen-xs-max) and (min-height: 600px) {
-        //background: #000 url(http://i.istockimg.com/file_thumbview_approve/36563476/2/stock-illustration-36563476-abstract-world-map-background.jpg) no-repeat center center;
-        //background: #000 url(http://i.istockimg.com/file_thumbview_approve/37444400/2/stock-illustration-37444400-abstract-technical-background.jpg) no-repeat center center;
         background: #000 url(../img/bg-education-1.jpg) no-repeat center center;
-        //background: #000 url(http://image.shutterstock.com/display_pic_with_logo/403330/403330,1260886715,2/stock-vector-stock-chart-on-a-globe-concept-of-global-trade-vector-illustration-42878548.jpg) no-repeat center center;
         background-size: cover;
     }
 }
@@ -102,11 +101,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, {
 
     @media (min-width: @screen-xs-max) and (min-height: 600px) {
         left: 50%;
-        margin-left: -300px;
-        margin-top: -300px;
+        margin-left: @sign-up-box-width / -2;
+        margin-top: @sign-up-box-height / -2;
         position: absolute;
-        height: 550px;
+        height: @sign-up-box-height;
         top: 50%;
-        width: 600px;
+        width: @sign-up-box-width;
     }
 }
