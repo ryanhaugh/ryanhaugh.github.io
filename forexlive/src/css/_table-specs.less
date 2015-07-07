@@ -1,0 +1,52 @@
+.panel-specs {
+    .panel-heading {
+        background-color: @table-border-color;
+    }
+    .panel-body {
+        padding: 0;
+    }
+}
+
+.table-specs {
+    border: none;
+    margin: 0;
+
+    &-yes {
+        background-color: @state-success-bg;
+        color: @state-success-text;
+        text-align: center;
+    }
+
+    &-no {
+        background-color: @state-danger-bg;
+        color: @state-danger-text;
+        text-align: center;
+    }
+
+    th {
+        background-color: @table-bg-active;
+        border: 1px solid @table-border-color;
+        border-left: none;
+    }
+
+    td {
+        border: 1px solid @table-border-color;
+        border-right: none;
+    }
+
+    tr {
+        &:first-of-type {
+            th,
+            td {
+                border-top: none;
+            }
+        }
+
+        &:last-of-type {
+            th,
+            td {
+                border-bottom: none;
+            }
+        }
+    }
+}

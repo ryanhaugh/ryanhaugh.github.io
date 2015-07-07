@@ -1,0 +1,43 @@
+.perimeter-container {
+    height: 600px;
+    position: absolute;
+    top: 0;
+    width: @perimeter-width;
+
+    @media (max-width: 1430px) {
+        display: none;
+    }
+
+    &-left {
+        left: -200px;
+    }
+
+    &-right {
+        right: -200px;
+    }
+}
+
+.perimeter-container-fixed {
+    height: 100vh;
+    left: 50%;
+    position: fixed;
+    top: 0;
+    width: @perimeter-width;
+    z-index: -1;
+
+    @media (max-width: 1430px) {
+        display: none;
+    }
+
+    &-left {
+        margin-left: -696px;
+    }
+
+    &-right {
+        margin-left: 496px;
+    }
+
+    .perimeter-content {
+        margin-top: 62px;
+    }
+}
