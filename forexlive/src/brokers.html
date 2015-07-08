@@ -8,6 +8,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <link rel="stylesheet/less" type="text/css" href="css/main.less" />
     <script src="bower_components/less/dist/less.min.js"></script>
@@ -134,48 +135,154 @@
                 </div>
             </div>
 
-            <div class="col-md-9 hidden-xs col">
-                <table class="table table-bordered table-striped table-brokers">
+            <div class="col-md-9 col">
+                <table class="table table-bordered table-brokers">
+                    <colgroup>
+                        <col class="table-brokers-colgroup-broker" />
+                        <col class="table-brokers-colgroup-regulation" />
+                        <col class="table-brokers-colgroup-details" />
+                        <col class="table-brokers-colgroup-promotions" />
+                        <col class="table-brokers-colgroup-account" />
+                    </colgroup>
                     <thead>
                         <tr>
                             <th>Broker</th>
                             <th>Regulation</th>
                             <th>Details</th>
-                            <th>Promotions</th>
-                            <th>Overall User Rating</th>
+                            <th class="hidden-xs">Promotions</th>
                             <th>Open an Account</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>FxPro
-                                <img src="http://11faa93b44aa01547ea0-8c928b431f91d1736760b58735a097ac.r88.cf2.rackcdn.com/brokers/fxpro100x33.png" />
+                            <td class="table-brokers-column-broker">
+                                <p>
+                                    <a href="broker-details.html">FxPro</a>
+                                </p>
+                                <p>
+                                    <a href="broker-details.html">
+                                        <img src="http://11faa93b44aa01547ea0-8c928b431f91d1736760b58735a097ac.r88.cf2.rackcdn.com/brokers/fxpro100x33.png" />
+                                    </a>
+                                </p>
                             </td>
-                            <td>FSA, ASIC, CySEC, MiFID</td>
-                            <td>
-                                Minimum Deposit:
+                            <td class="table-brokers-column-regulation">FSA, ASIC, CySEC, MiFID</td>
+                            <td class="table-brokers-column-details">
+                                <span class="label">Minimum Deposit:</span>
                                 <br />$500
-                                <br />Maximum Leverage:
+                                <br />
+                                <span class="label">Maximum Leverage:</span>
                                 <br />500:1
                             </td>
-                            <td>Better Tools, Better Support, Better Results</td>
-                            <td>4.4 Based on 40 user reviews</td>
-                            <td>FxPro</td>
+                            <td class="hidden-xs table-brokers-column-promotions">Better Tools,
+                                <br/>Better Support,
+                                <br/>Better Results</td>
+                            <td class="table-brokers-column-account">
+                                <p class="recommended">
+                                    Recommended
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-success btn-stretch">Open a Real Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-default btn-stretch">Open a Demo Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </td>
                         </tr>
                         <tr>
-                            <td>FxPro
-                                <img src="http://11faa93b44aa01547ea0-8c928b431f91d1736760b58735a097ac.r88.cf2.rackcdn.com/brokers/fxpro100x33.png" />
+                            <td class="table-brokers-column-broker">
+                                <p>
+                                    <a href="broker-details.html">FxPro</a>
+                                </p>
+                                <p>
+                                    <a href="broker-details.html">
+                                        <img src="http://11faa93b44aa01547ea0-8c928b431f91d1736760b58735a097ac.r88.cf2.rackcdn.com/brokers/fxpro100x33.png" />
+                                    </a>
+                                </p>
                             </td>
-                            <td>FSA, ASIC, CySEC, MiFID</td>
-                            <td>
-                                Minimum Deposit:
+                            <td class="table-brokers-column-regulation">FSA, ASIC, CySEC, MiFID</td>
+                            <td class="table-brokers-column-details">
+                                <span class="label">Minimum Deposit:</span>
                                 <br />$500
-                                <br />Maximum Leverage:
+                                <br />
+                                <span class="label">Maximum Leverage:</span>
                                 <br />500:1
                             </td>
-                            <td>Better Tools, Better Support, Better Results</td>
-                            <td>4.4 Based on 40 user reviews</td>
-                            <td>FxPro</td>
+                            <td class="hidden-xs table-brokers-column-promotions">Better Tools,
+                                <br/>Better Support,
+                                <br/>Better Results</td>
+                            <td class="table-brokers-column-account">
+                                <p class="recommended">
+                                    Recommended
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-success btn-stretch">Open a Real Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-default btn-stretch">Open a Demo Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-brokers-column-broker">
+                                <p>
+                                    <a href="broker-details.html">FxPro</a>
+                                </p>
+                                <p>
+                                    <a href="broker-details.html">
+                                        <img src="http://11faa93b44aa01547ea0-8c928b431f91d1736760b58735a097ac.r88.cf2.rackcdn.com/brokers/fxpro100x33.png" />
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="table-brokers-column-regulation">FSA, ASIC, CySEC, MiFID</td>
+                            <td class="table-brokers-column-details">
+                                <span class="label">Minimum Deposit:</span>
+                                <br />$500
+                                <br />
+                                <span class="label">Maximum Leverage:</span>
+                                <br />500:1
+                            </td>
+                            <td class="hidden-xs table-brokers-column-promotions">Better Tools,
+                                <br/>Better Support,
+                                <br/>Better Results</td>
+                            <td class="table-brokers-column-account">
+                                <p>
+                                    <a href="#" class="btn btn-success btn-stretch">Open a Real Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-default btn-stretch">Open a Demo Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="table-brokers-column-broker">
+                                <p>
+                                    <a href="broker-details.html">FxPro</a>
+                                </p>
+                                <p>
+                                    <a href="broker-details.html">
+                                        <img src="http://11faa93b44aa01547ea0-8c928b431f91d1736760b58735a097ac.r88.cf2.rackcdn.com/brokers/fxpro100x33.png" />
+                                    </a>
+                                </p>
+                            </td>
+                            <td class="table-brokers-column-regulation">FSA, ASIC, CySEC, MiFID</td>
+                            <td class="table-brokers-column-details">
+                                <span class="label">Minimum Deposit:</span>
+                                <br />$500
+                                <br />
+                                <span class="label">Maximum Leverage:</span>
+                                <br />500:1
+                            </td>
+                            <td class="hidden-xs table-brokers-column-promotions">Better Tools,
+                                <br/>Better Support,
+                                <br/>Better Results</td>
+                            <td class="table-brokers-column-account">
+                                <p>
+                                    <a href="#" class="btn btn-success btn-stretch">Open a Real Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                                <p>
+                                    <a href="#" class="btn btn-default btn-stretch">Open a Demo Account <i class="fa fa-angle-double-right"></i></a>
+                                </p>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
